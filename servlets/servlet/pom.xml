@@ -4,6 +4,13 @@
    <artifactId>servlet</artifactId>
    <packaging>war</packaging>
    <name>servlet</name>
+   <dependencies>
+      <dependency>
+         <groupId>org.jboss.spec.javax.servlet</groupId>
+         <artifactId>jboss-servlet-api_3.1_spec</artifactId>
+         <version>1.0.0.Final</version>
+      </dependency>
+   </dependencies>
    <parent>
       <groupId>com.kotliner.chatapp.servlets</groupId>
       <artifactId>servlets</artifactId>
