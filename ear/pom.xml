@@ -1,0 +1,46 @@
+<project>
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>com.kotliner.chatapp.ear</groupId>
+   <artifactId>ear</artifactId>
+   <packaging>ear</packaging>
+   <version>1.0</version>
+   <name>ear assembly</name>
+   <parent>
+      <groupId>com.kotliner.chatapp</groupId>
+      <artifactId>kotlinserverapp</artifactId>
+      <version>1.0</version>
+   </parent>
+   <dependencies>
+      <dependency>
+         <groupId>com.kotliner.chatapp.ejbs</groupId>
+         <artifactId>ejbs</artifactId>
+         <version>1.0</version>
+         <type>ejb</type>
+      </dependency>
+      <dependency>
+         <groupId>com.kotliner.chatapp.servlet</groupId>
+         <artifactId>servlet</artifactId>
+         <version>1.0</version>
+         <type>war</type>
+      </dependency>
+      <dependency>
+         <groupId>com.kotliner.chatapp.sources</groupId>
+         <artifactId>primary-source</artifactId>
+         <version>1.0</version>
+      </dependency>
+   </dependencies>
+   <build>
+      <plugins>
+         <plugin>
+            <artifactId>maven-ear-plugin</artifactId>
+            <configuration>
+               <archive>
+                  <manifest>
+                     <addClasspath>true</addClasspath>
+                  </manifest>
+               </archive>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
+</project>
